@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
       padding : 10,
   },
   boxThree : {
-      backgroundColor : 'corla',
+      backgroundColor : 'coral',
       padding : 10,
   },
   boxFour : {
-      backgroundColor : 'coral',
+      backgroundColor : 'skyblue',
       padding : 10,
   }
 });
