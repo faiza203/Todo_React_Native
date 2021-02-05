@@ -26,18 +26,22 @@ export default function App() {
     })
   }
 
+  function pressHandler(key) {
+    setTodos((prevTodos) => {
+      return prevTodos.filter(todo => todo.key !== key)
+    })
+  }
+
   return (
     <View style={styles.container}>
       <Header />
       <AddTodo submitHandler={submitHandler} />
-      <ScrollView >
         <FlatList
           data={todos}
           renderItem={(todos) => {
-            return <TodoItem item={todos} />
+            return <TodoItem item={todos} pressHandler={pressHandler}/>
           }}
         ></FlatList>
-      </ScrollView >
     </View>
   );
 }
