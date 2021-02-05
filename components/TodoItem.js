@@ -8,10 +8,8 @@ export default function TodoItem({ item , pressHandler}) {
 
 const styles = StyleSheet.create({
   todo: {
+    marginTop : 16,
     padding: 16,
-    marginTop: 16,
-    marginLeft: 18,
-    marginRight: 18,
     borderColor: "#bbb",
     borderWidth: 1,
     borderStyle: 'dashed',
