@@ -6,7 +6,7 @@ export default function addTodo({ submitHandler }) {
     function changeHandler(val) {
         setText(val)
     }
-    return (<View><TextInput placeholder="New Todo..." style={styles.input} onChangeText={changeHandler} /><Button title="Add Todo" style={styles.addBtn}
+    return (<View><TextInput placeholder="New Todo..." style={styles.input} onChangeText={changeHandler} /><Button style={styles.addBtn} title="Add Todo" 
         onPress={() => text !== "" ? submitHandler(text) : alert("Please add a todo")}
     /></View>);
 }
@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
         marginRight: 16,
         marginBottom: 16,
         width : '7em',
-        backgroundColor: 'coral'
+        backgroundColor: 'coral !important' 
     }
 })

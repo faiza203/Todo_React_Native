@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, FlatList, View, ScrollView, Alert } from "react-native";
+import {
+  StyleSheet,
+  FlatList,
+  View,
+  Keyboard,
+  Alert,
+  TouchableWithoutFeedback,
+  TouchableWithoutFeedbackBase,
+} from "react-native";
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
 import AddTodo from "./components/AddTodo";
@@ -25,7 +33,7 @@ export default function App() {
       ? setTodos((prevTodos) => {
           return [{ text, key: `"${prevTodos.length}"` }, ...prevTodos];
         })
-      : alert("Todo must be longer than 3");
+      : Alert.alert("Todo must be longer than 3");
   }
 
   function pressHandler(key) {
@@ -35,16 +43,22 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Header />
-      <AddTodo submitHandler={submitHandler} />
-      <FlatList
-        data={todos}
-        renderItem={(todos) => {
-          return <TodoItem item={todos} pressHandler={pressHandler} />;
-        }}
-      ></FlatList>
-    </View>
+    <TouchableWithoutFeedback
+      onPress={() => 
+        Keyboard.dismiss()
+      }
+    >
+      <View style={styles.container}>
+        <Header />
+        <AddTodo submitHandler={submitHandler} />
+        <FlatList
+          data={todos}
+          renderItem={(todos) => {
+            return <TodoItem item={todos} pressHandler={pressHandler} />;
+          }}
+        ></FlatList>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
