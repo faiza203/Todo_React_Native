@@ -4,7 +4,10 @@ import { StyleSheet, View, Text } from "react-native";
 export default function Header() {
   return (
     <View style={styles.container}>
-      <Text>Sand Box</Text>
+      <Text style={styles.boxOne}>One</Text>
+      <Text style={styles.boxTwo}>Two</Text>
+      <Text style={styles.boxThree}>Three</Text>
+      <Text style={styles.boxFour}>Four</Text>
     </View>
   );
 }
@@ -12,7 +15,23 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
       flex :1,
-    paddingTop: 800,
+    paddingTop: 40,
     backgroundColor : '#333'
   },
+  boxOne : {
+      backgroundColor : 'violet',
+      padding : 10,
+  },
+  boxTwo : {
+      backgroundColor : 'gold',
+      padding : 10,
+  },
+  boxThree : {
+      backgroundColor : 'corla',
+      padding : 10,
+  },
+  boxFour : {
+      backgroundColor : 'coral',
+      padding : 10,
+  }
 });
