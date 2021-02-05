@@ -19,10 +19,17 @@ export default function App() {
       key: "3",
     },
   ]);
+
+  function submitHandler(text) {
+    setTodos((prevTodos) => {
+      return [{ text, key: `"${prevTodos.length}"` }, ...prevTodos]
+    })
+  }
+
   return (
     <View style={styles.container}>
       <Header />
-      <AddTodo />
+      <AddTodo submitHandler={submitHandler} />
       <ScrollView >
         <FlatList
           data={todos}
