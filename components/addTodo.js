@@ -26,8 +26,7 @@ const styles = StyleSheet.create({
         marginLeft: 16,
         marginRight: 16,
         marginBottom: 16,
-        textAlign: "right",
-        width: 10,
+        width : '7em',
         backgroundColor: 'coral'
     }
 })
