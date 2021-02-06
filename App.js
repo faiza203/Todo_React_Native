@@ -44,21 +44,21 @@ export default function App() {
   }
 
   return (
-    <SandBox />
-    // <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-    //   <View style={styles.container}>
-    //     <Header />
-    //     <View style={styles.body}>
-    //       <AddTodo submitHandler={submitHandler} />
-    //       <FlatList
-    //         data={todos}
-    //         renderItem={(todos) => {
-    //           return <TodoItem item={todos} pressHandler={pressHandler} />;
-    //         }}
-    //       ></FlatList>
-    //     </View>
-    //   </View>
-    // </TouchableWithoutFeedback>
+    // <SandBox />
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.container}>
+        <Header />
+        <View style={styles.body}>
+          <AddTodo submitHandler={submitHandler} />
+          <FlatList
+            data={todos}
+            renderItem={(todos) => {
+              return <TodoItem item={todos} pressHandler={pressHandler} />;
+            }}
+          ></FlatList>
+        </View>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
