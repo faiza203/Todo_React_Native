@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   FlatList,
-  View,
-  Keyboard,
-  Alert,
-  TouchableWithoutFeedback,
+  View
 } from "react-native";
 
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
 import AddTodo from "./components/AddTodo";
-import SandBox from "./components/Sandbox"
+// import SandBox from "./components/Sandbox"
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -34,7 +31,7 @@ export default function App() {
       ? setTodos((prevTodos) => {
           return [{ text, key: `"${prevTodos.length}"` }, ...prevTodos];
         })
-      : Alert.alert("Todo must be longer than 3");
+      : alert("Todo must be longer than 3");
   }
 
   function pressHandler(key) {
@@ -45,7 +42,6 @@ export default function App() {
 
   return (
     // <SandBox />
-    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <Header />
         <View style={styles.body}>
@@ -58,7 +54,6 @@ export default function App() {
           ></FlatList>
         </View>
       </View>
-    </TouchableWithoutFeedback>
   );
 }
 
