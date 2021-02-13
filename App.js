@@ -48,8 +48,8 @@ export default function App() {
           <AddTodo submitHandler={submitHandler} />
           <FlatList
             data={todos}
-            renderItem={(todos) => {
-              return <TodoItem item={todos} pressHandler={pressHandler} />;
+            renderItem={(todo) => {
+              return <TodoItem item={todo} pressHandler={pressHandler} />;
             }}
           ></FlatList>
         </View>
