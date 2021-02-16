@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  FlatList,
-  View
-} from "react-native";
+import { StyleSheet, FlatList, View } from "react-native";
 
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
@@ -42,18 +38,18 @@ export default function App() {
 
   return (
     // <SandBox />
-      <View style={styles.container}>
-        <Header />
-        <View style={styles.body}>
-          <AddTodo submitHandler={submitHandler} />
-          <FlatList
-            data={todos}
-            renderItem={(todo) => {
-              return <TodoItem item={todo} pressHandler={pressHandler} />;
-            }}
-          ></FlatList>
-        </View>
+    <View style={styles.container}>
+      <Header />
+      <View style={styles.body}>
+        <AddTodo submitHandler={submitHandler} />
+        <FlatList
+          data={todos}
+          renderItem={(todo) => {
+            return <TodoItem item={todo} pressHandler={pressHandler} />;
+          }}
+        ></FlatList>
       </View>
+    </View>
   );
 }
 

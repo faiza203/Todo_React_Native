@@ -15,7 +15,7 @@ export default function addTodo({ submitHandler }) {
       />
       <Button
         title="Add Todo"
-        color= "coral"
+        color="coral"
         width={30}
         onPress={() =>
           text !== "" ? submitHandler(text) : alert("Please add a todo")
@@ -26,11 +26,11 @@ export default function addTodo({ submitHandler }) {
 }
 
 const styles = StyleSheet.create({
-  container : {
-    margin : 30,
+  container: {
+    margin: 30,
   },
   input: {
     padding: 16,
     textAlign: "center",
-  }
+  },
 });
