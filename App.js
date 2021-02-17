@@ -3,7 +3,7 @@ import { StyleSheet, FlatList, View } from "react-native";
 
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
-import AddTodo from "./components/AddTodo";
+import AddTodo from "./components/addTodo";
 // import SandBox from "./components/Sandbox"
 
 export default function App() {
