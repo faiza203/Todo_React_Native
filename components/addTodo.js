@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, TextInput, Button } from "react-native";
+import { StyleSheet, View, TextInput, Button , Alert} from "react-native";
 
 export default function addTodo({ submitHandler }) {
   const [text, setText] = useState("");
@@ -18,7 +18,7 @@ export default function addTodo({ submitHandler }) {
         color="coral"
         width={30}
         onPress={() =>
-          text !== "" ? submitHandler(text) : alert("Please add a todo")
+          text !== "" ? submitHandler(text) : Alert.alert("Please add a todo")
         }
       />
     </View>
@@ -32,5 +32,6 @@ const styles = StyleSheet.create({
   input: {
     padding: 16,
     textAlign: "center",
+    fontSize: 25,
   },
 });
